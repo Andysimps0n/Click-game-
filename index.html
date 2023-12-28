@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="picture/blue.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click!</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body id="bodyBox">
+    <div id="score">Score: <span id="score-value">0</span></div>
+    <div id="start">Start</div>
+    <div id="hard-mode">X</div>
+    <img src="picture/mute.ico" style='width: 50px; height: 50px;'id='mute'alt="">
+    <div id="bar-box">
+      <div id="bar" id="dynamic-bar"></div>
+    </div>
+
+    <div class="grid-container">
+    <div id="target"></div>
+    <div id="bonusTarget"></div>
+  </div>
+
+  <audio id="audio-BGM">
+    <source src="audio/BGM.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="audio-hit">
+    <source src="audio/hit.mp3" type="audio/mpeg">
+  </audio>
+  
+<script src="main.js"></script>
+</body>
+</html>

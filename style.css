@@ -1,0 +1,150 @@
+body {
+  margin: 10vh;
+  margin-top: 6.5vh;
+  height: calc(100Vh - ((10 * 2) + 6.5));
+  background-color: #0259dd;
+  font-family: 'Unbounded', sans-serif;
+  display: inline-block;
+} 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 100px); /* Change the number of columns as needed */
+  grid-template-rows: repeat(5, 100px);
+  gap: 5px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 90%; /* Fill the height of the parent container */
+}
+
+#score, #time, #start, #how-to-play, #hard-mode {
+  font-size: 30px;
+  font-weight: 800;
+  border-radius: 10px 10px 20px 10px;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 16px;
+  border: solid black 6px;
+  color: black;
+  box-shadow: -3px 7px rgba(0,0,0,1);
+  background-color: white;
+}
+#score {
+  width: 15%;
+  padding: 21px;
+}
+
+#hard-mode {
+  width: 4%;
+  padding: 6px;
+  background-color: red;
+  text-align: center;
+}
+
+#mute {
+  position: relative;
+  top: 15px;
+  border-radius: 10px;
+  margin-left: 4px;
+  transition: all 0.2s;
+}
+
+#mute:hover{
+  transform: translateY(-8px);
+}
+
+
+#time {
+  width: 13%;
+}
+
+#start {
+  width: 12%;  
+  text-align: right;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+#how-to-play:hover, #hard-mode:hover {
+  transform: translateY(-8px);
+}
+
+#start:hover {
+  transform: translateY(-10px);
+}
+
+#start, #how-to-play, #hard-mode {
+  transition: transform 0.2s, border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+ 
+#how-to-play {
+  width: 4%;
+  padding: 6px;
+  text-align: center;
+}
+
+#target, #bonusTarget {
+  background-color: transparent; 
+  display: inline-block;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 5px solid transparent; /* Initial border style */
+  transition: transform 0.4s, border-color 0.2s /* Apply transition to transform and border-color */
+}
+
+#target {
+  width: 80px;
+  height: 80px;
+  display: none;
+  /* transition: all 0.2s; */
+  border: solid 7px black;
+  
+}
+
+#target:hover {
+  border: solid 7px white;
+  background-color: black;
+}
+
+#bonusTarget {
+  width: 40px;
+  height: 40px;
+  background-color: #ffe53b;
+  display: none;
+}
+
+#bonusTarget:hover {
+  transform: 1s;
+  border: solid 8px rgb(8, 92, 228);
+}
+
+#bar-box {
+  width: 500px;
+  height: 30px;
+  position: relative;
+  padding: 5px;
+  top: 12px;
+  margin-left: 10px;
+  background-color: white;
+  overflow: hidden;
+  border: solid black 6px;
+  border-radius: 10px 10px 20px 10px;
+  color: black;
+  display: inline-block;
+  box-shadow: -3px 7px rgba(0,0,0,1);
+}
+
+#bar {
+  height: 100%;
+  background-color: #00cc00;
+  width: 100%; /* Initial width set to 0% */
+  transition: width 0.09s;
+  border-radius: 10px;
+}
+
